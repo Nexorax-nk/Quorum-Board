@@ -234,7 +234,7 @@ SLACK_BOT_TOKEN=xoxb-11580147209364-11582036518100-FAsy...
 SLACK_SIGNING_SECRET=0a203e3d1cdfec19f2726...
 
 # High-Speed LLM Inference Engine
-GROQ_API_KEY=gsk_WNQIhxSA5Pe6IeueSID8WGd...
+GROQ_API_KEY=your-groq-api-key
 ```
 
 ---
@@ -243,6 +243,7 @@ GROQ_API_KEY=gsk_WNQIhxSA5Pe6IeueSID8WGd...
 
 ### Step 1: Clone and Install
 ```bash
+
 git clone https://github.com/Nexorax-nk/Quorum-Board.git
 cd Quorum-Board
 npm install
