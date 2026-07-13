@@ -6,6 +6,7 @@
 [![Track: New Slack Agent](https://img.shields.io/badge/Track-New%20Slack%20Agent-36C5F0?style=flat-square)](#)
 [![Architecture: Multi-Agent](https://img.shields.io/badge/Architecture-Multi--Agent%20Orchestration-2EB67D?style=flat-square)](#)
 [![Tests](https://img.shields.io/badge/tests-7%20passed-brightgreen?style=flat-square)](#testing)
+[![Live Deployment](https://img.shields.io/badge/Live%20Backend-quorum--board.onrender.com-success?style=flat-square&logo=render)](#)
 
 ---
 
@@ -21,6 +22,12 @@
 - [Backtested on Real Decisions](#backtested-on-real-decisions)
 - [Project Structure](#project-structure)
 - [The Grand Prize Pitch](#the-grand-prize-pitch)
+
+---
+
+## 🚀 Live Deployment
+The Quorum Board backend is currently deployed and running live on Render: **[quorum-board.onrender.com](https://quorum-board.onrender.com)**  
+*(Note: As this is a Slack Socket Mode integration, there is no web frontend. The service is actively maintaining a persistent websocket connection to the Slack Developer Sandbox 24/7, kept alive via cron).*
 
 ---
 
