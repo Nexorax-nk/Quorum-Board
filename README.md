@@ -74,6 +74,8 @@ The output is a strictly formatted verdict from a Moderator: Go or No-Go, a conf
 
 Quorum Board abandons simple parallel LLM calls in favor of a **sequential, memory-injected orchestration loop** to ensure genuine cross-agent debate.
 
+![Architecture Diagram](assets/architecture%20diagram.png)
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontFamily': 'Inter, sans-serif', 'primaryColor': '#080b12', 'primaryTextColor': '#f1f5f9', 'primaryBorderColor': '#1e293b', 'lineColor': '#64748b', 'tertiaryColor': '#0f172a' }}}%%
 graph TD
@@ -243,7 +245,6 @@ GROQ_API_KEY=your-groq-api-key
 
 ### Step 1: Clone and Install
 ```bash
-
 git clone https://github.com/Nexorax-nk/Quorum-Board.git
 cd Quorum-Board
 npm install
