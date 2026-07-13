@@ -1,7 +1,13 @@
 require('dotenv').config();
 const { App } = require('@slack/bolt');
+const express = require('express');
 const { evaluateWithGroq } = require('./services/llm');
 const { boardMembers, historian, devilAdvocate, moderator } = require('./agents');
+
+// Setup a dummy Express server to keep Render happy
+const expressApp = express();
+expressApp.get('/', (req, res) => res.send('Quorum Board is alive!'));
+expressApp.get('/health', (req, res) => res.status(200).send('OK'));
 
 const app = new App({
     token: process.env.SLACK_BOT_TOKEN,
@@ -151,6 +157,12 @@ app.command('/board', async ({ command, ack, respond, client }) => {
 });
 
 (async () => {
+    // Start the dummy Express server for Render port binding
+    const port = process.env.PORT || 3000;
+    expressApp.listen(port, () => {
+        console.log(`Dummy Express server listening on port ${port} to satisfy Render health checks.`);
+    });
+
     await app.start();
     console.log('⚡️ Quorum Board is running with extreme persona optimization and Historian RTS!');
 })();
